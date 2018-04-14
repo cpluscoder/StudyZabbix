@@ -1,0 +1,4 @@
+include:定义了libs库文件对应的头文件
+create：定义了数据库的创建机制以及初始化数据的SQL脚本
+misc：定义了相关的针对不同linux平台的启动脚本以及对应的配置文件
+frontends：定义了相关的前台php文件

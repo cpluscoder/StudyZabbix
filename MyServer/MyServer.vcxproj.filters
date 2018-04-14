@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="alerter">
+      <UniqueIdentifier>{dd9ff84e-e7ac-494e-a7ef-e1fed339fe3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbconfig">
+      <UniqueIdentifier>{f0c11b7d-d384-4d02-96b3-084c3b0d9ae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dbsyncer">
+      <UniqueIdentifier>{6f576381-bb5e-472e-9fb6-51775c54239a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="discoverer">
+      <UniqueIdentifier>{b88cfab8-03b4-47f4-98de-e8bdaeb39aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="escalator">
+      <UniqueIdentifier>{e415ccac-4033-4617-a2cd-dd237f75c843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="housekeeper">
+      <UniqueIdentifier>{0c3657a2-a1ed-48e7-b8de-be30946673a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="httppoller">
+      <UniqueIdentifier>{5de3450e-a4bd-4573-a9dc-937962aa68ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ipmi">
+      <UniqueIdentifier>{69fff809-74b1-45fe-b6f6-d41b7c59780c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pinger">
+      <UniqueIdentifier>{e57d6bec-2595-433c-88aa-156e7eee21fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="poller">
+      <UniqueIdentifier>{6e98c8f5-5db8-4067-90b2-cd132cba61e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor">
+      <UniqueIdentifier>{e6adbb16-d9dd-4d20-b884-9032c463330c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proxypoller">
+      <UniqueIdentifier>{f2452b22-af0e-41bd-8102-53b30b20ee15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{57e2dbec-55d3-4bf8-9a12-171887dce769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="selfmon">
+      <UniqueIdentifier>{e300bbfd-a728-4940-9996-80d764c3fad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="snmptrapper">
+      <UniqueIdentifier>{64046b43-b643-4cd7-bbbc-337b9302e320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskmanager">
+      <UniqueIdentifier>{93c48f08-702a-4c6b-8b28-90adcb1d4ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="timer">
+      <UniqueIdentifier>{a129a76d-2b7f-4108-bf8a-f213f077f72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="trapper">
+      <UniqueIdentifier>{92d233e6-1f8d-4201-8614-ed0fe320bbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vmware">
+      <UniqueIdentifier>{a1507474-9342-4662-8de1-c09e9a221d30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter.c">
+      <Filter>alerter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter_protocol.c">
+      <Filter>alerter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alert_manager.c">
+      <Filter>alerter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\server.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\dbconfig\dbconfig.c">
+      <Filter>dbconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\dbsyncer\dbsyncer.c">
+      <Filter>dbsyncer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\discoverer\discoverer.c">
+      <Filter>discoverer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\escalator\escalator.c">
+      <Filter>escalator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\housekeeper\housekeeper.c">
+      <Filter>housekeeper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httpmacro.c">
+      <Filter>httppoller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httppoller.c">
+      <Filter>httppoller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httptest.c">
+      <Filter>httppoller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\checks_ipmi.c">
+      <Filter>ipmi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi.c">
+      <Filter>ipmi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_manager.c">
+      <Filter>ipmi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_poller.c">
+      <Filter>ipmi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_protocol.c">
+      <Filter>ipmi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\pinger\pinger.c">
+      <Filter>pinger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_agent.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_aggregate.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_calculated.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_db.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_external.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_internal.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_java.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple_vmware.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_snmp.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_ssh.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_telnet.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\poller.c">
+      <Filter>poller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\item_preproc.c">
+      <Filter>preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\linked_list.c">
+      <Filter>preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preprocessing.c">
+      <Filter>preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_manager.c">
+      <Filter>preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_worker.c">
+      <Filter>preprocessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\proxypoller\proxypoller.c">
+      <Filter>proxypoller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\scripts\scripts.c">
+      <Filter>scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\selfmon\selfmon.c">
+      <Filter>selfmon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\snmptrapper\snmptrapper.c">
+      <Filter>snmptrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\proxy_tasks.c">
+      <Filter>taskmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\taskmanager.c">
+      <Filter>taskmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\timer\timer.c">
+      <Filter>timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\active.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\nodecommand.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyautoreg.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyconfig.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydata.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydiscovery.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyhosts.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\trapper.c">
+      <Filter>trapper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\vmware\vmware.c">
+      <Filter>vmware</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\actions.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\events.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\operations.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter.h">
+      <Filter>alerter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter_protocol.h">
+      <Filter>alerter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alert_manager.h">
+      <Filter>alerter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\dbconfig\dbconfig.h">
+      <Filter>dbconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\dbsyncer\dbsyncer.h">
+      <Filter>dbsyncer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\discoverer\discoverer.h">
+      <Filter>discoverer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\escalator\escalator.h">
+      <Filter>escalator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\housekeeper\housekeeper.h">
+      <Filter>housekeeper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httpmacro.h">
+      <Filter>httppoller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httppoller.h">
+      <Filter>httppoller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httptest.h">
+      <Filter>httppoller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\checks_ipmi.h">
+      <Filter>ipmi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi.h">
+      <Filter>ipmi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_manager.h">
+      <Filter>ipmi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_poller.h">
+      <Filter>ipmi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_protocol.h">
+      <Filter>ipmi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\pinger\pinger.h">
+      <Filter>pinger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_agent.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_aggregate.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_calculated.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_db.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_external.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_internal.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_java.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple_vmware.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_snmp.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_ssh.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_telnet.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\poller.h">
+      <Filter>poller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\item_preproc.h">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\linked_list.h">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preprocessing.h">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_manager.h">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_worker.h">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\proxypoller\proxypoller.h">
+      <Filter>proxypoller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\scripts\scripts.h">
+      <Filter>scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\selfmon\selfmon.h">
+      <Filter>selfmon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\snmptrapper\snmptrapper.h">
+      <Filter>snmptrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\taskmanager.h">
+      <Filter>taskmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\timer\timer.h">
+      <Filter>timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\active.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\nodecommand.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyautoreg.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyconfig.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydata.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydiscovery.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyhosts.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\trapper.h">
+      <Filter>trapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\vmware\vmware.h">
+      <Filter>vmware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\actions.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\events.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\operations.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

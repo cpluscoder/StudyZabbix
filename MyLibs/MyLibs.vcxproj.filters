@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="zbxalgo">
+      <UniqueIdentifier>{26b75d5f-6984-497d-94f4-e939e6f5b885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxwin32">
+      <UniqueIdentifier>{87dc476b-92a3-4074-be63-fab8e9d36452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxcommon">
+      <UniqueIdentifier>{4ce1ddef-9913-48de-b91e-93a1529c3c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxcomms">
+      <UniqueIdentifier>{7e4a07ae-1edc-4065-bcd5-21fcbff0b90a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxcommshigh">
+      <UniqueIdentifier>{b31bb8d6-7ce8-4627-896b-566732e862df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxconf">
+      <UniqueIdentifier>{0a1e5a40-d5d6-41cb-8e65-5d1ceaea1b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxcrypto">
+      <UniqueIdentifier>{9063c45c-ef60-434c-abd2-ab6f784744b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxdb">
+      <UniqueIdentifier>{df223b72-9fe7-4217-ba54-f403871113de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxdbcache">
+      <UniqueIdentifier>{0c27a210-0fd6-4c7e-9d1b-101f7eba2028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxdbhigh">
+      <UniqueIdentifier>{751f49e6-56a0-4d46-aab7-7bf04c6110cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxdbupgrade">
+      <UniqueIdentifier>{a9f1b21a-a766-4b44-af7b-61685dcb15ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxexec">
+      <UniqueIdentifier>{63049786-4fdd-44e4-bdce-c286eda9a9ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxhistory">
+      <UniqueIdentifier>{34a06cbf-c00f-4210-81b6-f5782a1bbb0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxhttp">
+      <UniqueIdentifier>{9f7ec4a2-c631-4847-84de-14cc985ba151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxicmpping">
+      <UniqueIdentifier>{a01374fb-1b14-47c3-ab48-55ba53ff74e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxipcservice">
+      <UniqueIdentifier>{dceb86ea-c6d1-41cc-99c8-38a7350b6cc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxjson">
+      <UniqueIdentifier>{9425ba12-6b68-42ad-bf32-0c03a96c4680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxlog">
+      <UniqueIdentifier>{2a7c57a9-5a3f-4b9e-87a6-b21010eb19c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxmedia">
+      <UniqueIdentifier>{6365cc00-e230-4550-90f0-33f7599a15c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxmemory">
+      <UniqueIdentifier>{8d9aafcd-da31-4ff5-b57f-fb863aa82e3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxmodules">
+      <UniqueIdentifier>{a0ae38be-efee-4fdd-a7aa-1e047c72fd9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxnix">
+      <UniqueIdentifier>{319f6ea7-488b-4bca-a7bc-cd2a798a308f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxregexp">
+      <UniqueIdentifier>{c443f5b3-3fc0-4087-9431-a082a3c7a2f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxself">
+      <UniqueIdentifier>{f35979e2-0abc-4170-bf85-73a636850452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxserver">
+      <UniqueIdentifier>{bed4c6b7-b047-46c7-acd8-1a1a640c5be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsys">
+      <UniqueIdentifier>{2ae004d2-8a69-4df4-bb1a-3f5bac010b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo">
+      <UniqueIdentifier>{7c784f77-01da-4512-9560-a1fca8a05c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\agent">
+      <UniqueIdentifier>{85164966-6523-4c76-b560-804f24a19673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\aix">
+      <UniqueIdentifier>{e82892b1-213e-4412-baad-cc108b557415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\common">
+      <UniqueIdentifier>{0f5524ab-f360-4f3b-b0e3-28d9ba167350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\freebsd">
+      <UniqueIdentifier>{164b6753-06a3-42a9-b979-643afe9e8b16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\hpux">
+      <UniqueIdentifier>{7544b3f4-cb40-47a0-9967-d7a4df77520d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\linux">
+      <UniqueIdentifier>{ee7da92b-045b-41a9-9d97-65e95701b0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\netbsd">
+      <UniqueIdentifier>{0c6db66a-6373-4f48-9626-00eb2695ded3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\openbsd">
+      <UniqueIdentifier>{822d5a1e-21f8-475e-955e-bf445d699625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\osf">
+      <UniqueIdentifier>{23a6cf68-cb2f-4c83-8fa0-4a52263bb3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\osx">
+      <UniqueIdentifier>{801e1ee5-b11a-40bb-822d-136f798fdbd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\simple">
+      <UniqueIdentifier>{8b143c4f-2563-4fca-9f23-b6101efe47f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\solaris">
+      <UniqueIdentifier>{d89b2e0c-4dbe-46d7-8f0d-18e0deaf496e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\unknown">
+      <UniqueIdentifier>{5629eaf9-193e-4c81-8060-b8a1a242d931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxsysinfo\win32">
+      <UniqueIdentifier>{084a7187-2fa2-43eb-9e58-4ed279fbd721}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zbxtasks">
+      <UniqueIdentifier>{7bea923b-fc0f-46bc-b0fa-aa0c0d9ad931}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\algodefs.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\binaryheap.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\evaluate.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\hashmap.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\hashset.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\int128.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\prediction.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\queue.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxalgo\vector.c">
+      <Filter>zbxalgo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxwin32\disk.c">
+      <Filter>zbxwin32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxwin32\fatal.c">
+      <Filter>zbxwin32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxwin32\perfmon.c">
+      <Filter>zbxwin32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxwin32\service.c">
+      <Filter>zbxwin32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\alias.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\comms.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\file.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\iprange.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\misc.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\setproctitle.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\str.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\variant.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\xml.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommon\zbxgetopt.c">
+      <Filter>zbxcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcomms\comms.c">
+      <Filter>zbxcomms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcomms\telnet.c">
+      <Filter>zbxcomms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcommshigh\comms.c">
+      <Filter>zbxcommshigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxconf\cfg.c">
+      <Filter>zbxconf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcrypto\base64.c">
+      <Filter>zbxcrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcrypto\md5.c">
+      <Filter>zbxcrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxcrypto\tls.c">
+      <Filter>zbxcrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdb\db.c">
+      <Filter>zbxdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbcache.c">
+      <Filter>zbxdbcache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbconfig.c">
+      <Filter>zbxdbcache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbconfig_dump.c">
+      <Filter>zbxdbcache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbsync.c">
+      <Filter>zbxdbcache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbcache\valuecache.c">
+      <Filter>zbxdbcache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\db.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\dbschema.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\discovery.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\event.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\host.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\itservices.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld_common.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld_graph.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld_host.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld_item.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld_trigger.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\odbc.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\proxy.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\template_item.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\trigger.c">
+      <Filter>zbxdbhigh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_2010.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_2020.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_2030.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_2040.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_2050.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_3000.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_3010.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_3020.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_3030.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade_3040.c">
+      <Filter>zbxdbupgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxexec\execute.c">
+      <Filter>zbxexec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxhistory\history.c">
+      <Filter>zbxhistory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxhistory\history_elastic.c">
+      <Filter>zbxhistory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxhistory\history_sql.c">
+      <Filter>zbxhistory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxhttp\punycode.c">
+      <Filter>zbxhttp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxhttp\urlencode.c">
+      <Filter>zbxhttp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxicmpping\icmpping.c">
+      <Filter>zbxicmpping</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxipcservice\ipcservice.c">
+      <Filter>zbxipcservice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxjson\json.c">
+      <Filter>zbxjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxjson\json_parser.c">
+      <Filter>zbxjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxlog\log.c">
+      <Filter>zbxlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmedia\email.c">
+      <Filter>zbxmedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmedia\eztexting.c">
+      <Filter>zbxmedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmedia\jabber.c">
+      <Filter>zbxmedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmedia\sms.c">
+      <Filter>zbxmedia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmemory\memalloc.c">
+      <Filter>zbxmemory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmemory\strpool.c">
+      <Filter>zbxmemory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxmodules\modules.c">
+      <Filter>zbxmodules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\control.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\coredump.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\daemon.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\dshm.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\fatal.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\ipc.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\pid.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxnix\sighandler.c">
+      <Filter>zbxnix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxregexp\zbxregexp.c">
+      <Filter>zbxregexp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxself\selfmon.c">
+      <Filter>zbxself</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxserver\evalfunc.c">
+      <Filter>zbxserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxserver\expression.c">
+      <Filter>zbxserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxserver\macrofunc.c">
+      <Filter>zbxserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsys\mutexs.c">
+      <Filter>zbxsys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsys\symbols.c">
+      <Filter>zbxsys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsys\threads.c">
+      <Filter>zbxsys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\sysinfo.c">
+      <Filter>zbxsysinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\agent\agent.c">
+      <Filter>zbxsysinfo\agent</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\aix.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\cpu.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\diskio.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\diskspace.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\hostname.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\inodes.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\memory.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\net.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\proc.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\software.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\swap.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\system.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\uptime.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\aix\vmstats.c">
+      <Filter>zbxsysinfo\aix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\common.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\cpu.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\dir.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\file.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\http.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\net.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\system.c">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\boottime.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\cpu.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\diskio.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\diskspace.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\freebsd.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\hostname.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\inodes.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\kernel.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\memory.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\net.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\proc.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\software.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\swap.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\system.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\freebsd\uptime.c">
+      <Filter>zbxsysinfo\freebsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\cpu.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\diskio.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\diskspace.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\hostname.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\hpux.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\inodes.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\memory.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\net.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\proc.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\software.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\hpux\system.c">
+      <Filter>zbxsysinfo\hpux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\boottime.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\cpu.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\diskio.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\diskspace.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\hardware.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\hostname.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\inodes.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\kernel.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\linux.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\memory.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\net.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\proc.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\sensors.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\software.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\swap.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\system.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\uptime.c">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\boottime.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\cpu.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\diskio.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\diskspace.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\hostname.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\inodes.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\kernel.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\memory.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\net.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\netbsd.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\proc.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\software.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\system.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\netbsd\uptime.c">
+      <Filter>zbxsysinfo\netbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\boottime.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\cpu.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\diskio.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\diskspace.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\hostname.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\inodes.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\kernel.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\memory.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\net.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\openbsd.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\proc.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\sensors.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\software.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\swap.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\system.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\openbsd\uptime.c">
+      <Filter>zbxsysinfo\openbsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\cpu.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\diskio.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\diskspace.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\hostname.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\inodes.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\kernel.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\memory.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\osf.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\proc.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\software.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\swap.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\system.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osf\uptime.c">
+      <Filter>zbxsysinfo\osf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\boottime.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\cpu.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\diskio.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\diskspace.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\hostname.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\inodes.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\kernel.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\memory.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\net.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\osx.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\software.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\system.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\osx\uptime.c">
+      <Filter>zbxsysinfo\osx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\simple\ntp.c">
+      <Filter>zbxsysinfo\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\simple\simple.c">
+      <Filter>zbxsysinfo\simple</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\boottime.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\cpu.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\diskio.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\diskspace.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\hostname.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\inodes.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\kernel.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\memory.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\net.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\proc.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\software.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\solaris.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\swap.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\system.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\solaris\uptime.c">
+      <Filter>zbxsysinfo\solaris</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\unknown\diskio.c">
+      <Filter>zbxsysinfo\unknown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\unknown\hostname.c">
+      <Filter>zbxsysinfo\unknown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\unknown\unknown.c">
+      <Filter>zbxsysinfo\unknown</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\cpu.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\diskio.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\diskspace.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\hostname.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\memory.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\net.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\pdhmon.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\proc.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\services.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\software.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\swap.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\system.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\uptime.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\win32.c">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\win32\wmi.cpp">
+      <Filter>zbxsysinfo\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxtasks\task.c">
+      <Filter>zbxtasks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxalgo\vectorimpl.h">
+      <Filter>zbxalgo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxcrypto\tls.h">
+      <Filter>zbxcrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxcrypto\tls_tcp.h">
+      <Filter>zbxcrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxcrypto\tls_tcp_active.h">
+      <Filter>zbxcrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbconfig.h">
+      <Filter>zbxdbcache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbcache\dbsync.h">
+      <Filter>zbxdbcache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbcache\valuecache.h">
+      <Filter>zbxdbcache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\lld.h">
+      <Filter>zbxdbhigh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbhigh\template.h">
+      <Filter>zbxdbhigh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxdbupgrade\dbupgrade.h">
+      <Filter>zbxdbupgrade</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxhistory\history.h">
+      <Filter>zbxhistory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxhttp\punycode.h">
+      <Filter>zbxhttp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxjson\json_parser.h">
+      <Filter>zbxjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxnix\control.h">
+      <Filter>zbxnix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxnix\fatal.h">
+      <Filter>zbxnix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxnix\sigcommon.h">
+      <Filter>zbxnix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxserver\evalfunc.h">
+      <Filter>zbxserver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxserver\macrofunc.h">
+      <Filter>zbxserver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\specsysinfo.h">
+      <Filter>zbxsysinfo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\agent\agent.h">
+      <Filter>zbxsysinfo\agent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\common.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\cpu.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\dir.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\file.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\http.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\net.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\common\system.h">
+      <Filter>zbxsysinfo\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\hardware.h">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\proc.h">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\linux\software.h">
+      <Filter>zbxsysinfo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\simple\ntp.h">
+      <Filter>zbxsysinfo\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxsysinfo\simple\simple.h">
+      <Filter>zbxsysinfo\simple</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

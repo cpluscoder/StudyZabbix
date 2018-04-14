@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="datasender">
+      <UniqueIdentifier>{5d3cd833-b3a0-4481-98d3-6e6d1899f6f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="heart">
+      <UniqueIdentifier>{2e508cf8-d6e6-4697-91cb-83d66feac03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="housekeeper">
+      <UniqueIdentifier>{9f833cf2-9189-428e-a30f-76d0ff2164bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proxyconfig">
+      <UniqueIdentifier>{f0877733-a51f-4bbf-a7ac-696f20f02b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taskmanager">
+      <UniqueIdentifier>{d7601160-7444-4e50-bde1-544c219a8416}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\datasender\datasender.c">
+      <Filter>datasender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\heart\heart.c">
+      <Filter>heart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\housekeeper\housekeeper.c">
+      <Filter>housekeeper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\proxyconfig\proxyconfig.c">
+      <Filter>proxyconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\taskmanager\server_tasks.c">
+      <Filter>taskmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\taskmanager\taskmanager.c">
+      <Filter>taskmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\events.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\preprocessing.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\proxy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_proxy\servercomms.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\datasender\datasender.h">
+      <Filter>datasender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\servercomms.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\heart\heart.h">
+      <Filter>heart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\housekeeper\housekeeper.h">
+      <Filter>housekeeper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\proxyconfig\proxyconfig.h">
+      <Filter>proxyconfig</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_proxy\taskmanager\taskmanager.h">
+      <Filter>taskmanager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

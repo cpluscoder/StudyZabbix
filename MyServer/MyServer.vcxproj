@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B0623F33-4112-4BAC-B326-A9E49A8B97FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MyServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../zabbix-3.4.7/include;../zabbix-3.4.7/src/libs/zbxdbcache;../zabbix-3.4.7/build/win32/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../zabbix-3.4.7/include;../zabbix-3.4.7/src/libs/zbxdbcache;../zabbix-3.4.7/build/win32/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\actions.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter_protocol.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alert_manager.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\dbconfig\dbconfig.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\dbsyncer\dbsyncer.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\discoverer\discoverer.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\escalator\escalator.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\events.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\housekeeper\housekeeper.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httpmacro.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httppoller.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httptest.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\checks_ipmi.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_manager.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_poller.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_protocol.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\operations.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\pinger\pinger.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_agent.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_aggregate.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_calculated.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_db.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_external.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_internal.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_java.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple_vmware.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_snmp.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_ssh.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_telnet.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\poller\poller.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\item_preproc.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\linked_list.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preprocessing.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_manager.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_worker.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\proxypoller\proxypoller.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\scripts\scripts.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\selfmon\selfmon.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\server.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\snmptrapper\snmptrapper.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\proxy_tasks.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\taskmanager.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\timer\timer.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\active.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\nodecommand.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyautoreg.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyconfig.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydata.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydiscovery.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyhosts.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\trapper\trapper.c" />
+    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_server\vmware\vmware.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\actions.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alerter_protocol.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\alerter\alert_manager.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\dbconfig\dbconfig.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\dbsyncer\dbsyncer.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\discoverer\discoverer.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\escalator\escalator.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\events.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\housekeeper\housekeeper.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httpmacro.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httppoller.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\httppoller\httptest.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\checks_ipmi.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_manager.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_poller.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\ipmi\ipmi_protocol.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\operations.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\pinger\pinger.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_agent.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_aggregate.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_calculated.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_db.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_external.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_internal.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_java.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_simple_vmware.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_snmp.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_ssh.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\checks_telnet.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\poller\poller.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\item_preproc.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\linked_list.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preprocessing.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_manager.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\preprocessor\preproc_worker.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\proxypoller\proxypoller.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\scripts\scripts.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\selfmon\selfmon.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\snmptrapper\snmptrapper.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\taskmanager\taskmanager.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\timer\timer.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\active.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\nodecommand.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyautoreg.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyconfig.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydata.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxydiscovery.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\proxyhosts.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\trapper\trapper.h" />
+    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_server\vmware\vmware.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
