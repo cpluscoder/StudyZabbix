@@ -22,7 +22,9 @@
 
 #if defined(_WINDOWS)
 
+#ifndef _WIN32_WINNT
 #	define _WIN32_WINNT	0x0501	/* target MS Windows XP and later */
+#endif
 
 /* some definitions which are not available on older MS Windows versions */
 typedef enum {

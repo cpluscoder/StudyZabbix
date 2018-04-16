@@ -21,7 +21,11 @@
 #include "log.h"
 #include "mutexs.h"
 #include "stats.h"
+#ifndef _WINDOWS
 #include "ipc.h"
+#endif
+
+
 #include "procstat.h"
 
 #ifdef ZBX_PROCSTAT_COLLECTOR
