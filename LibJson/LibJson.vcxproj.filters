@@ -13,18 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="win32">
-      <UniqueIdentifier>{cf49c0ce-3c82-4100-81b4-b6e2e7e8c1f6}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\zabbix-3.4.7\src\zabbix_sender\zabbix_sender.c">
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxjson\json.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\zabbix-3.4.7\src\libs\zbxjson\json_parser.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\zabbix-3.4.7\src\zabbix_sender\win32\zabbix_sender.h">
-      <Filter>win32</Filter>
+    <ClInclude Include="..\zabbix-3.4.7\src\libs\zbxjson\json_parser.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -47,8 +47,11 @@
  *                                                                            *
  ******************************************************************************/
 
-#define ZBX_INFINITY	(1.0 / 0.0)	/* "Positive infinity" value used as a fatal error code */
-#define ZBX_UNKNOWN	(-1.0 / 0.0)	/* "Negative infinity" value used as a code for "Unknown" */
+//#define ZBX_INFINITY	(1.0 / 0.0)	/* "Positive infinity" value used as a fatal error code */
+//#define ZBX_UNKNOWN	(-1.0 / 0.0)	/* "Negative infinity" value used as a code for "Unknown" */
+const double double_zero = 0.0;
+#define ZBX_INFINITY	(1.0 / double_zero)	/* "Positive infinity" value used as a fatal error code */
+#define ZBX_UNKNOWN	(-1.0 / double_zero)	/* "Negative infinity" value used as a code for "Unknown" */
 
 static const char	*ptr;		/* character being looked at */
 static int		level;		/* expression nesting level  */

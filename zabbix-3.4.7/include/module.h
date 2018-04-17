@@ -45,14 +45,14 @@
 #define CF_MODULE		0x02	/* item is defined in a loadable module */
 #define CF_USERPARAMETER	0x04	/* item is defined as user parameter */
 
-typedef struct
-{
-	char		*key;
-	unsigned	flags;
-	int		(*function)();
-	char		*test_param;	/* item test parameters; user parameter items keep command here */
-}
-ZBX_METRIC;
+//typedef struct
+//{
+//	char		*key;
+//	unsigned	flags;
+//	int		(*function)();
+//	char		*test_param;	/* item test parameters; user parameter items keep command here */
+//}
+//ZBX_METRIC;
 
 /* agent request structure */
 typedef struct
@@ -100,6 +100,16 @@ typedef struct
 AGENT_RESULT;
 
 /* SET RESULT */
+
+typedef struct
+{
+	char		*key;
+	unsigned	flags;
+	int		(*function)(AGENT_REQUEST *request, AGENT_RESULT *result);
+	char		*test_param;	/* item test parameters; user parameter items keep command here */
+}
+ZBX_METRIC;
+
 
 #define SET_UI64_RESULT(res, val)		\
 (						\

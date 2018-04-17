@@ -1189,9 +1189,9 @@ static void	pick_logfile(const char *directory, const char *filename, int mtime,
 
 	if (0 == zbx_stat(logfile_candidate, &file_buf))
 	{
-		if (S_ISREG(file_buf.st_mode) &&
-				mtime <= file_buf.st_mtime &&
-				0 == regexec(re, filename, (size_t)0, NULL, 0))
+		//if (S_ISREG(file_buf.st_mode) &&
+		//		mtime <= file_buf.st_mtime &&
+		//		0 == regexec(re, filename, (size_t)0, NULL, 0))
 		{
 			add_logfile(logfiles, logfiles_alloc, logfiles_num, logfile_candidate, &file_buf);
 		}
@@ -1374,18 +1374,18 @@ static int	make_logfile_list(unsigned char flags, const char *filename, const in
 			goto clean;
 		}
 
-		if (0 != (reg_error = regcomp(&re, format, REG_EXTENDED | REG_NEWLINE | REG_NOSUB)))
+		//if (0 != (reg_error = regcomp(&re, format, REG_EXTENDED | REG_NEWLINE | REG_NOSUB)))
 		{
 			char	err_buf[MAX_STRING_LEN];
 
-			regerror(reg_error, &re, err_buf, sizeof(err_buf));
+			//regerror(reg_error, &re, err_buf, sizeof(err_buf));
 			*err_msg = zbx_dsprintf(*err_msg, "Cannot compile a regular expression describing filename"
 					" pattern: %s", err_buf);
 			ret = FAIL;
 #ifdef _WINDOWS
 			/* the Windows gnuregex implementation does not correctly clean up */
 			/* allocated memory after regcomp() failure                        */
-			regfree(&re);
+			//regfree(&re);
 #endif
 			goto clean1;
 		}
@@ -1420,7 +1420,7 @@ static int	make_logfile_list(unsigned char flags, const char *filename, const in
 #endif
 		}
 clean2:
-		regfree(&re);
+		//regfree(&re);
 clean1:
 		zbx_free(directory);
 		zbx_free(format);

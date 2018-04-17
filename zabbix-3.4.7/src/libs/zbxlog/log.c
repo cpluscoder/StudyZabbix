@@ -23,7 +23,7 @@
 #include "threads.h"
 #include "cfg.h"
 #ifdef _WINDOWS
-#	include "messages.h"
+//#	include "messages.h"
 #	include "service.h"
 static HANDLE		system_log_handle = INVALID_HANDLE_VALUE;
 #endif
@@ -525,7 +525,7 @@ void	__zbx_zabbix_log(int level, const char *fmt, ...)
 			system_log_handle,
 			wType,
 			0,
-			MSG_ZABBIX_MESSAGE,
+			0/*MSG_ZABBIX_MESSAGE*/,
 			NULL,
 			sizeof(strings) / sizeof(*strings),
 			0,
