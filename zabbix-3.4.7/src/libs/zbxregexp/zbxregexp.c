@@ -45,30 +45,30 @@ int	zbx_regexp_compile(const char *regex_txt, int flags, regex_t *regex_compiled
 	int	re_error = 0;
 	regex_t	re = {0};
 
-//	if (0 == (re_error = regcomp(&re, regex_txt, flags)))
-//	{
-//		if (NULL != regex_compiled)
-//			*regex_compiled = re;	/* copy a structure, 64-bytes on x86_64 */
-//		else
-//			regfree(&re);
-//
-//		return SUCCEED;
-//	}
-//
-//	/* compilation failed */
-//
-//	if (NULL != error)
-//	{
-//		char	buf[MAX_STRING_LEN];
-//
-//		regerror(re_error, &re, buf, sizeof(buf));
-//		*error = zbx_strdup(*error, buf);
-//	}
-//#ifdef _WINDOWS
-//	/* the Windows gnuregex implementation does not correctly clean up */
-//	/* allocated memory after regcomp() failure */
-//	regfree(&re);
-//#endif
+	if (0 == (re_error = regcomp(&re, regex_txt, flags)))
+	{
+		if (NULL != regex_compiled)
+			*regex_compiled = re;	/* copy a structure, 64-bytes on x86_64 */
+		else
+			regfree(&re);
+
+		return SUCCEED;
+	}
+
+	/* compilation failed */
+
+	if (NULL != error)
+	{
+		char	buf[MAX_STRING_LEN];
+
+		regerror(re_error, &re, buf, sizeof(buf));
+		*error = zbx_strdup(*error, buf);
+	}
+#ifdef _WINDOWS
+	/* the Windows gnuregex implementation does not correctly clean up */
+	/* allocated memory after regcomp() failure */
+	regfree(&re);
+#endif
 	return FAIL;
 }
 
@@ -93,8 +93,7 @@ int	zbx_regexp_compile(const char *regex_txt, int flags, regex_t *regex_compiled
  ******************************************************************************/
 int	zbx_regexp_exec(const char *string, const regex_t *regex_compiled, int flags, size_t count, regmatch_t *matches)
 {
-	//return regexec(regex_compiled, string, count, matches, flags);
-	return 0;
+	return regexec(regex_compiled, string, count, matches, flags);
 }
 
 /******************************************************************************
@@ -111,7 +110,7 @@ int	zbx_regexp_exec(const char *string, const regex_t *regex_compiled, int flags
  ******************************************************************************/
 void	zbx_regexp_free(regex_t *regex_compiled)
 {
-	//regfree(regex_compiled);
+	regfree(regex_compiled);
 }
 
 /******************************************************************************
@@ -133,8 +132,7 @@ void	zbx_regexp_free(regex_t *regex_compiled)
  ******************************************************************************/
 int     zbx_regexp_match_precompiled(const char *string, const regex_t *regex)
 {
-	//return zbx_regexp_exec(string, regex, 0, (size_t)0, NULL);
-	return 0;
+	return zbx_regexp_exec(string, regex, 0, (size_t)0, NULL);
 }
 
 static char	*zbx_regexp(const char *string, const char *pattern, int *len, int flags)
@@ -154,41 +152,41 @@ static char	*zbx_regexp(const char *string, const char *pattern, int *len, int f
 
 	/* performance optimization: if possible then reuse the last compiled regexp */
 
-//	if (NULL == old_pattern)
-//		goto compile;
-//
-//	if (0 != strcmp(old_pattern, pattern) || old_flags != flags)
-//		regfree(&re);
-//	else
-//		goto execute;
-//compile:
-//	if (0 == regcomp(&re, pattern, flags))
-//	{
-//		old_pattern = zbx_strdup(old_pattern, pattern);
-//		old_flags = flags;
-//	}
-//	else
-//	{
-//#ifdef _WINDOWS
-//		/* the Windows gnuregex implementation does not correctly clean up */
-//		/* allocated memory after regcomp() failure                        */
-//		regfree(&re);
-//#endif
-//		zbx_free(old_pattern);
-//		goto out;
-//	}
-//execute:
-//	if (0 == regexec(&re, string, (size_t)1, &match, 0))	/* matched */
-//	{
-//		c = (char *)string + match.rm_so;
-//
-//		if (NULL != len)
-//			*len = match.rm_eo - match.rm_so;
-//	}
-//	else if (NULL != len)
-//	{
-//		*len = SUCCEED;
-//	}
+	if (NULL == old_pattern)
+		goto compile;
+
+	if (0 != strcmp(old_pattern, pattern) || old_flags != flags)
+		regfree(&re);
+	else
+		goto execute;
+compile:
+	if (0 == regcomp(&re, pattern, flags))
+	{
+		old_pattern = zbx_strdup(old_pattern, pattern);
+		old_flags = flags;
+	}
+	else
+	{
+#ifdef _WINDOWS
+		/* the Windows gnuregex implementation does not correctly clean up */
+		/* allocated memory after regcomp() failure                        */
+		regfree(&re);
+#endif
+		zbx_free(old_pattern);
+		goto out;
+	}
+execute:
+	if (0 == regexec(&re, string, (size_t)1, &match, 0))	/* matched */
+	{
+		c = (char *)string + match.rm_so;
+
+		if (NULL != len)
+			*len = match.rm_eo - match.rm_so;
+	}
+	else if (NULL != len)
+	{
+		*len = SUCCEED;
+	}
 out:
 	return c;
 }
@@ -334,34 +332,34 @@ static int	regexp_sub(const char *string, const char *pattern, const char *outpu
 
 	/* performance optimization: if possible then reuse the last compiled regexp */
 
-//	if (NULL == old_pattern)
-//		goto compile;
-//
-//	if (0 != strcmp(old_pattern, pattern) || old_flags != flags)
-//		regfree(&re);
-//	else
-//		goto execute;
-//compile:
-//	if (0 == regcomp(&re, pattern, flags))
-//	{
-//		old_pattern = zbx_strdup(old_pattern, pattern);
-//		old_flags = flags;
-//	}
-//	else
-//	{
-//#ifdef _WINDOWS
-//		/* the Windows gnuregex implementation does not correctly clean up */
-//		/* allocated memory after regcomp() failure                        */
-//		regfree(&re);
-//#endif
-//		zbx_free(old_pattern);
-//		return FAIL;
-//	}
-//execute:
-//	zbx_free(*out);
-//
-//	if (0 == regexec(&re, string, ARRSIZE(match), match, 0))
-//		*out = regexp_sub_replace(string, output_template, match, ARRSIZE(match));
+	if (NULL == old_pattern)
+		goto compile;
+
+	if (0 != strcmp(old_pattern, pattern) || old_flags != flags)
+		regfree(&re);
+	else
+		goto execute;
+compile:
+	if (0 == regcomp(&re, pattern, flags))
+	{
+		old_pattern = zbx_strdup(old_pattern, pattern);
+		old_flags = flags;
+	}
+	else
+	{
+#ifdef _WINDOWS
+		/* the Windows gnuregex implementation does not correctly clean up */
+		/* allocated memory after regcomp() failure                        */
+		regfree(&re);
+#endif
+		zbx_free(old_pattern);
+		return FAIL;
+	}
+execute:
+	zbx_free(*out);
+
+	if (0 == regexec(&re, string, ARRSIZE(match), match, 0))
+		*out = regexp_sub_replace(string, output_template, match, ARRSIZE(match));
 
 	return SUCCEED;
 }

@@ -42,13 +42,13 @@
 #include <string>
 #include <iosfwd>    // for ostream forward-declaration
 
-#if 
-#define HAVE_TYPE_TRAITS
-#include <type_traits.h>
-#elif 
-#define HAVE_TYPE_TRAITS
-#include <bits/type_traits.h>
-#endif
+//#if 
+//#define HAVE_TYPE_TRAITS
+//#include <type_traits.h>
+//#elif 
+//#define HAVE_TYPE_TRAITS
+//#include <bits/type_traits.h>
+//#endif
 
 using std::string;
 
