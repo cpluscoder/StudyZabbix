@@ -1,0 +1,92 @@
+Zabbix 的安装配置
+Zabbix Server需要运行在CentOS、RedHat Linux、Debain等Linux系统上，现在以CentOS作为部署环境。
+Zabbix Server需要LAMP环境，以及其他一些依赖的包。配置好yum，通过yum安装下列包，以解决包的依赖关系。
+
+/*****LAMP环境准备*****/
+LAMP环境：#yum install mysql-server httpd php
+安装其他需要用到的包：#yum install  mysql-dev gcc net-snmp-devel curl-devel
+perl-DBI php-gd php-mysql php-bcmath php-mbstring php-xml
+下载最新的Zabbix安装包到本地目录/root下，解压：#tar zxvf zabbix-1.8.11.tar.gz
+
+/*****Mysql数据库准备*****/
+启动MySQL数据库：#service mysqld start
+修改MySQL root用户密码(默认密码为空)：#mysqladmin –u root –p password ******
+测试能否正常登陆数据库：#mysql –u root –p ******。若可以登录，显示Mysql->
+创建Zabbix数据库：Mysql> create database zabbix character set utf8;
+下面导入数据库sql脚本：
+# cd zabbix-1.8.11
+# cat ./create/schema/mysql.sql |mysql  –u root –p zabbix（此处zabbix指数据库）
+# cat ./create/data/data.sql |mysql –u root –p  zabbix
+# cat ./create/data/images_mysql.sql |mysql –u root –p  zabbix
+
+/*****编译安装zabbix *****/
+配置编译，prefix后是安装程序目录：
+# ./configure  --with-mysql  --with-net-snmp  --with-libcurl  --enable-server  --enable-agent
+--enable-proxy --prefix=/usr/local/zabbix
+# make
+# make install
+
+/*****修改配置文件及web前端文件*****/
+1.添加服务端口,用vi修改/etc/services,加入如下端口：
+zabbix-agent    10050/tcp            # Zabbix Agent
+zabbix-agent    10050/udp            # Zabbix Agent
+zabbix-trapper  10051/tcp              # Zabbix Trapper
+zabbix-trapper  10051/udp            # Zabbix Trapper
+2.添加配置文件
+# mkdir -p /etc/zabbix
+# cd /zabbix-1.8.11
+# cp –R ./misc/conf/*  /etc/zabbix
+# chown -R root:root  /etc/zabbix
+3.修改Server配置文件，只修改一项DBPassword，其他使用默认配置。
+# vi /etc/zabbix/zabbix_server.conf
+4.修改Agentd配置文件,将hostname改为本机的主机名，此处改为loacalhost.  并且修改
+server的IP。
+#vi /etc/zabbix/zabbix_agentd.conf
+5.添加web前端php文件
+# cd frontends/
+# cp -rf php /var/www/html/
+# cd /var/www/html
+# mv php zabbix
+# chown -R root:root zabbix
+
+/***** web前端安装配置及设置zabbix启动方法*****/
+1.  修改php相关参数：# vi /etc/php.ini  。修改如下几项的值以符合Zabbix的环境要求。
+前面有“；”号的要删掉。
+max_execution_time = 300
+date.timezone = Asia/Shanghai
+post_max_size = 32M
+memory_limit = 128M
+mbstring.func_overload = 2
+max_input_time=600;
+2.重启apache
+#service httpd restart
+3.将apache(httpd)和mysql设为开机自动启动，命令如下：
+chkconfig –add httpd
+chkconfig –level 345 httpd on
+chkconfig –add mysqld
+chkconfig –level 345 mysqld on
+4. zabbix的启动设置
+cp /usr/local/zabbix/sbin/zabbix_server  /etc/init.d/zabbix-server
+cp /usr/local/zabbix/sbin/zabbix_agent  /etc/init.d/zabbix-agent
+此后，用命令/etc/init.d/zabbix_server start和/etc/init.d/zabbix_agentd start就可以启动zabbix server和agent服务了
+5. 安装frontend
+在本地浏览器上访问Zabbis Serve地址开始web前端配置：http://ServerIP/index.php，按提示一步步next，其中每一步必须全部OK后才能继续配置。
+按照安装文档的提示，配置完成后，出现登陆界面，Zabbix服务器搭建完毕完成。
+Zabbix的WebUI和zabbix server可以放在不同的机子上，因为由php写的WEB UI只要在apache服务器中加载php module就可解释使用。
+该Web UI通过IP:port的socket通信方式和zabbix server通信，也会和mysql数据库交互。
+将WebUI放在哪个机子上并不影响zabbix服务器。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

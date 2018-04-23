@@ -1,0 +1,100 @@
+企业级的分布式开源监控方案
+Zabbix是免费的。Zabbix是根据GPL通用公共许可证第2版编写和发行的。
+Zabbix可以模拟鼠标在Web网站上的操作来检查Web的功能和响应时间
+自动发现网络设备(https://www.zabbix.com/documentation/3.4/zh/manual/discovery/network_discovery)
+自动监控新的节点:活动的Zabbix agent可以自动注册到服务器进行监控。无需在服务器上手动配置。
+指定服务器:在agent配置文件中指定Zabbix server - zabbix_agentd.conf    ServerActive=10.0.0.1
+
+Discovery of Windows services(https://www.zabbix.com/documentation/3.4/manual/discovery/low_level_discovery/windows_services)
+
+VMware Login
+appliance/zabbix
+root/zabbix
+
+appliance切换root:#sudo su
+guest切换appliance:su appliance
+
+----配置文件路径
+/etc/zabbix
+----程序路径
+/usr/sbin(zabbix_server zabbix_agentd zabbix_java zabbix_java_gateway)
+/usr/bin(zabbix_get zabbix_sender)
+----PHP路径
+/usr/share/zabbix
+----jar
+/usr/share/zabbix-java-gateway
+
+
+在zabbix_server.conf中编辑数据库配置
+# vi /etc/zabbix/zabbix_server.conf
+DBHost=localhost
+DBName=zabbix
+DBUser=zabbix
+DBPassword=zabbix
+
+Database:
+root:<random>
+zabbix:<random>
+z1Z60Z6goz
+
+change the database user password it has to be changed in the following locations:
+MySQL;
+/etc/zabbix/zabbix_server.conf
+/etc/zabbix/web/zabbix.conf.php
+
+Configuration files: /etc/zabbix
+Zabbix server, proxy and agent logfiles: /var/log/zabbix
+Zabbix frontend: /usr/share/zabbix
+Home directory for user zabbix: /var/lib/zabbix
+
+
+启动Zabbix Server进程
+CentOS:# systemctl start zabbix-server
+Debian/Ubuntu:# service zabbix-server start
+service zabbix-server start
+/etc/init.d/zabbix-server start
+
+service zabbix-server stop
+service zabbix-server restart
+service zabbix-server status
+
+
+Zabbix前端的Apache配置文件位于 /etc/httpd/conf.d/zabbix.conf 。一些PHP设置已经完成了配置。
+php_value max_execution_time 300
+php_value memory_limit 128M
+php_value post_max_size 16M
+php_value upload_max_filesize 2M
+php_value max_input_time 300
+php_value always_populate_raw_post_data -1
+# php_value date.timezone Europe/Riga
+
+依据所在时区，你可以取消 “date.timezone” 设置的注释，并正确配置它。在配置文件更改后，需要重启Apache Web服务器。
+# service apache2 restart
+
+----前端配置
+http://192.168.122.146/zabbix/setup.php
+
+192.168.122.146
+Zabbix前端可以在浏览器中通过 http://zabbix-frontend-hostname/zabbix 进行访问。
+http://192.168.122.146/zabbix
+默认的用户名/密码: Admin/zabbix。
+
+sudo killall vsftpd
+sudo service vsftpd start
+
+
+----通过共享目录实现Windows和Linux的互相访问
+1、共享WindowsE盘ShareToLinux文件夹
+2、在ubuntu系统下安装samba-client (sudo apt-get install smbclient)
+3、在ubuntu系统下安装cifs-utils (sudo apt-get install cifs-utils)
+4、在ubuntu系统下创建目录hupf (mkdir /home/hupf)
+5、挂载Windows上的ShareToLinux到ubuntu上的/home/hupf
+   sudo mount -t cifs -o username=Administrator //172.22.100.18/ShareToLinux /home/hupf
+   sudo mount -t cifs -o username=hupf //172.22.100.18/ShareToLinux /home/hupf
+   其中Administrator是Windows的用户名, 172.22.100.18是Windows主机的ip地址
+   运行命令出现以下提示，Password for Administrator@172.22.100.18/ShareToLinux: 输入Windows主机的Administrator用户的密码
+6、通过 /home/hupf 和 ShareToLinux 在Windows和Linux之间交换数据
+
+----端口定义
+/etc/services
+
