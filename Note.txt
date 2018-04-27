@@ -1,15 +1,71 @@
 企业级的分布式开源监控方案
-Zabbix是免费的。Zabbix是根据GPL通用公共许可证第2版编写和发行的。
+Zabbix是免费的，根据GPL通用公共许可证第2版编写和发行的。
 Zabbix可以模拟鼠标在Web网站上的操作来检查Web的功能和响应时间
 自动发现网络设备(https://www.zabbix.com/documentation/3.4/zh/manual/discovery/network_discovery)
 自动监控新的节点:活动的Zabbix agent可以自动注册到服务器进行监控。无需在服务器上手动配置。
-指定服务器:在agent配置文件中指定Zabbix server - zabbix_agentd.conf    ServerActive=10.0.0.1
+
+zabbix_server:服务程序，zabbix_agentd、zabbix_get、zabbix_sender、zabbix_proxy、zabbix_java_gateway的数据都提交到zabbix_server
+zabbix_proxy:代理守护进程，功能类似server，只是转发收集到的数据提交到server
+zabbix_agentd:客户端守护进程，此进程收集客户端数据，例如cpu负载、内存、硬盘使用情况等
+zabbix_get:通常在server或者proxy侧单独执行，获取远程客户端信息。例如：server获取不到客户端的内存数据，可使用zabbix_get来做故障排查
+zabbix_sender:发送数据给server或者proxy，用于耗时比较长的检查。很多检查非常耗时间，导致zabbix超时，可使用sender主动提交数据
+abbix_java_gateway:zabbix2.0后引入，只用于Java, 类似agentd。只能主动获取数据。数据最终会提交到server或者proxy
+
+zabbix_server对服务器的硬件配置要求非常低
+4核16G可监控1W+主机(https://www.zabbix.com/documentation/3.4/manual/installation/requirements)
+
+
+LNMP环境配置
+Linux安装：http://www.osyunwei.com/archives/1024.html
+NGINX安装：http://www.ttlsa.com/nginx/nginx-install-on-linux/
+PHP安装+NGINX配置：http://www.ttlsa.com/nginx/nginx-php-5_5/ （安装前一定要看1.1 PHP安装参数）
+MYSQL安装：http://www.ttlsa.com/mysql/install-mysql5_6/
+
 
 Discovery of Windows services(https://www.zabbix.com/documentation/3.4/manual/discovery/low_level_discovery/windows_services)
 
-VMware Login
+
+----SAAS平台监控远程PC
+SAAS平台无法主动连接远程PC，远程PC可以主动连接SAAS平台
+ZabbixServer无法主动连接远程ZabbixAgent
+SAAS平台(有固定IP)给ZabbixServer开放端口，ZabbixAgent(没有固定IP)可以主动连接ZabbixServer
+
+ZabbixAgent与ZabbixServer交互
+ZabbixAgent与ZabbixProxy交互
+ZabbixProxy与ZabbixServer交互
+(1)	主动(Active)模式
+	安装运行ZabbixAgent，ZabbixAgent不监听本地端口、不执行远程命令
+(2)	捕获(Trapper)模式
+	不需要ZabbixAgent，通过执行ZabbixSender，向ZabbixServer发送数据
+	HostName需要唯一
+	Type of information必须使用"text"
+(3)	代理(Proxy)模式
+	Active(主动)
+	Passive(被动)
+(3)	Agent模式
+	被动:被动检测, ZabbixServer向ZabbixAgent发送检测请求，ZabbixAgent(被动)向ZabbixServer提交检测结果
+	主动(Active):主动检测, ZabbixAgent主动向ZabbixServer提交检测结果
+
+
+捕获模式的Proxy接收ZabbixSender或ZabbixAgent(主动)发送的数据
+
+设置agent服务器:修改配置文件 Zabbix server - zabbix_agentd.conf    ServerActive=10.0.0.1
+
+----VMware Login
 appliance/zabbix
 root/zabbix
+
+netstat -atunpl
+all
+tcp
+udp
+numeric
+pid/program
+listening
+
+ServerActive:指定ZabbixAgent采集数据的发送方
+Hostname:必须和ZabbixServer添加主机时的主机名一致
+
 
 appliance切换root:#sudo su
 guest切换appliance:su appliance
@@ -30,12 +86,9 @@ guest切换appliance:su appliance
 DBHost=localhost
 DBName=zabbix
 DBUser=zabbix
-DBPassword=zabbix
+DBPassword=z1Z60Z6goz
 
-Database:
-root:<random>
-zabbix:<random>
-z1Z60Z6goz
+
 
 change the database user password it has to be changed in the following locations:
 MySQL;
@@ -59,6 +112,10 @@ service zabbix-server restart
 service zabbix-server status
 
 
+sudo killall vsftpd
+sudo service vsftpd start
+
+
 Zabbix前端的Apache配置文件位于 /etc/httpd/conf.d/zabbix.conf 。一些PHP设置已经完成了配置。
 php_value max_execution_time 300
 php_value memory_limit 128M
@@ -79,9 +136,7 @@ Zabbix前端可以在浏览器中通过 http://zabbix-frontend-hostname/zabbix �
 http://192.168.122.146/zabbix
 默认的用户名/密码: Admin/zabbix。
 
-sudo killall vsftpd
-sudo service vsftpd start
-
+Configuration--Templates--items:监控项
 
 ----通过共享目录实现Windows和Linux的互相访问
 1、共享WindowsE盘ShareToLinux文件夹
