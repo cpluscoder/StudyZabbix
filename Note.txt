@@ -4,6 +4,17 @@ Zabbix可以模拟鼠标在Web网站上的操作来检查Web的功能和响应�
 自动发现网络设备(https://www.zabbix.com/documentation/3.4/zh/manual/discovery/network_discovery)
 自动监控新的节点:活动的Zabbix agent可以自动注册到服务器进行监控,无需在服务器上手动配置
 
+轻量目录访问协议
+LDAP, Lightweight Directory Access Protocol
+
+安全传输层协议v1.2
+TLS, Transport Layer Security
+
+应用场景介绍
+https://www.zabbix.com/solutions
+https://www.zabbix.com/it_and_telecommunications
+
+
 zabbix_server:服务程序，zabbix_agentd、zabbix_get、zabbix_sender、zabbix_proxy、zabbix_java_gateway的数据都提交到zabbix_server
 zabbix_proxy:代理守护进程，功能类似server，只是转发收集到的数据提交到server
 zabbix_agentd:客户端守护进程，此进程收集客户端数据，例如cpu负载、内存、硬盘使用情况等
@@ -31,6 +42,7 @@ agent主动(active)
 	agent向server/proxy定期发送检测结果
 	数据由agent主动提交至server/proxy
 	agent不监听本地端口、不执行远程命令
+	此模式的agent可自动注册，不需在server/proxy配置
 
 server/proxy轮询(polling)
 agent被动(passive)
@@ -48,7 +60,7 @@ server/proxy捕获(trapping)
 
 
 
-集成第三方配置管理(安装/卸载/更新)
+集成第三方配置管理
 Puppet, cfengine, Chef, bcfg2, Salt
 
 IT基础设施/服务/应用/云资源监控的解决方案
