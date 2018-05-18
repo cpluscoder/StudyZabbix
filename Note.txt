@@ -38,14 +38,14 @@ MYSQL安装：http://www.ttlsa.com/mysql/install-mysql5_6/
 agent主动(active)
 	agent主动检测
 	server/proxy捕获检测结果
-	agent向server/proxy请求主动检测列表
-	agent向server/proxy定期发送检测结果
+	agent主动向server/proxy请求检测列表
+	agent定期向server/proxy发送检测结果
 	数据由agent主动提交至server/proxy
 	agent不监听本地端口、不执行远程命令
 	此模式的agent可自动注册，不需在server/proxy配置
 
-server/proxy轮询(polling)
 agent被动(passive)
+server/proxy轮询(polling)
 	server/proxy主动向agent收集监控数据
 	agent需监听本地端口
 	agent提供丰富的key，包括不限于cpu、内存、网络、磁盘、web等
@@ -119,6 +119,26 @@ Hostname:必须和ZabbixServer添加主机时的主机名一致
 appliance切换root:#sudo su
 guest切换appliance:su appliance
 
+----tcpdump
+/usr/local/lib/libpcap.so.1.8.1
+/usr/local/sbin/tcpdump
+tcpdump --help
+tcpdump -D		/*列出可用于抓包的接口。将会列出接口的数值编号和接口名，可用于"-i"*/
+tcpdump -i XXX(指定tcpdump需要监听的接口)
+tcpdump -nn		/*除了-n的作用外，还把端口显示为数值，否则显示端口服务名*/
+tcpdump -XX		/*输出包的头部数据，会以16进制和ASCII两种方式同时输出，更详细*/
+tcpdump -vvv	/*产生比-vv更详细的输出*/
+tcpdump -c XXX(指定抓包数量，注意是最终获取的包。例如，指定"-c 10"将获取10个包，但可能已处理了100个包，只有10个包是满足条件的)
+
+
+----查看LINUX版本信息
+cat /proc/version
+uname -a
+lsb_release -a
+cat /etc/issue
+
+
+
 ----配置文件路径
 /etc/zabbix
 ----程序路径
@@ -164,6 +184,26 @@ service zabbix-server status
 
 sudo killall vsftpd
 sudo service vsftpd start
+
+
+安装Apache
+sudo yum -y install httpd
+systemctl start httpd.service #启动
+systemctl stop httpd.service #停止
+systemctl restart httpd.service #重启
+systemctl enable httpd.service #开机启动
+systemctl disable httpd.service #开机不启动
+
+安装PHP
+sudo yum install php-mysqlnd php-gd libjpeg* php-snmp 
+php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring 
+php-bcmatch php-common php-ctype php-xmlreader php-xmlwriter 
+php-session php-gettext php-mysqli --skip-broken
+
+sudo yum install wget telnet net-tools python-paramiko 
+gcc gcc-c++ dejavu-sans-fonts python-setuptools python-devel 
+sendmail mailx net-snmp net-snmp-devel net-snmp-utils 
+freetype-devel libpng-devel perl unbound libtasn1-devel p11-kit-devel OpenIPMI unixODBC
 
 
 Zabbix前端的Apache配置文件位于 /etc/httpd/conf.d/zabbix.conf 
@@ -246,7 +286,7 @@ Built-in web monitoring				Yes
 4、在ubuntu系统下创建目录hupf (mkdir /home/hupf)
 5、挂载Windows上的ShareToLinux到ubuntu上的/home/hupf
    sudo mount -t cifs -o username=Administrator //172.22.100.18/ShareToLinux /home/hupf
-   sudo mount -t cifs -o username=hupf //172.22.100.18/ShareToLinux /home/hupf
+   sudo mount -t cifs -o username=hupf //172.22.100.18/ShareToCentOs7 /home/hupf/CentOs7ShareFiles
    其中Administrator是Windows的用户名, 172.22.100.18是Windows主机的ip地址
    运行命令出现以下提示，Password for Administrator@172.22.100.18/ShareToLinux: 输入Windows主机的Administrator用户的密码
 6、通过 /home/hupf 和 ShareToLinux 在Windows和Linux之间交换数据
